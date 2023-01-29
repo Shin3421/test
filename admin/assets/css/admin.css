@@ -1,0 +1,128 @@
+/* Budz */
+
+.time-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.time-slots {
+    background-color: #980799;
+    border: 1px solid #980799;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 10px 0 0;
+    padding: 6px 15px;
+}
+
+.time-slots a {
+    color: #e642e6;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.time-slots a:hover {
+    color: #fff;
+}
+
+.edit-link {
+    color: #e642e6;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.nav-link {
+    color: #e642e6;
+}
+
+.nav-link:hover {
+    color: #980799;
+}
+
+.schedules {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.schedule-list {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.schedule-info {
+    margin-right: auto;
+    text-align: left;
+}
+
+.schedule-choices {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.button-div {
+    margin-right: auto;
+    text-align: left;
+}
+
+.message-cont {
+    padding-left: 15px;
+    background: #FFFFFF;
+    margin: 5px 5px 5px 5px;
+    display: grid;
+    border-radius: 10px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.message-cont:hover {
+    box-shadow: inset 350px 0 0 0 #ffe1ff;
+}
+
+.message-content-read {
+    padding-left: 15px;
+    background: #ffe1ff;
+    margin: 5px 5px 5px 5px;
+    display: grid;
+    border-radius: 10px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+/* */
+
+#searchbar {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input[type=text] {
+    width: 100%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+
+/* When the input field gets focus,
+       change its width to 100% */
+
+input[type=text]:focus {
+    width: 150%;
+}
+
+#list {
+    font-size: 1.5em;
+    margin-left: 90px;
+}
+
+.booked-sched {
+    display: contents;
+}

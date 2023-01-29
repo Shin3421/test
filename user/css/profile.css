@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background: #ffeffe;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 40px;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 20px;
+    color: #980799;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #980799;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.collapse {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_sign {
+    display: inline-block;
+    font-weight: 600;
+    right: 80px;
+    margin-top: 0px;
+    background-color: #00c5ce;
+}
+
+.btn_reg {
+    display: inline-block;
+    font-weight: 600;
+    right: 80px;
+    margin-top: 0px;
+    background-color: #00c5ce;
+}
+
+@media only screen and (max-width: 991px) {
+    .logo {
+        width: 50px;
+        margin-left: 20px;
+    }
+    .nav-link {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 0px;
+    }
+    .btn_sign {
+        position: relative;
+        left: 45%;
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .btn_sign {
+        position: relative;
+        left: 39%;
+    }
+}
+
+
+/* Footer */
+
+#cont_footer {
+    margin-top: 300px;
+}
+
+.image-footer {
+    width: 24px;
+    height: 23px;
+    margin: 0 10px;
+}
+
+.social-med-h3 {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.links-ul {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #00c5ce;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #00c5ce;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+/* Budz */
+
+.time-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.time-slots {
+    background-color: #980799;
+    border: 1px solid #980799;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 10px 0 0;
+    padding: 6px 15px;
+}
+
+.time-slots a {
+    color: #e642e6;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.time-slots a:hover {
+    color: #fff;
+}
+
+.edit-link {
+    color: #e642e6;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.nav-link {
+    color: #e642e6;
+}
+
+.nav-link:hover {
+    color: #980799;
+}
+
+.schedules {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.schedule-list {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.schedule-info {
+    margin-right: auto;
+    text-align: left;
+}
+
+.schedule-choices {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.button-div {
+    margin-right: auto;
+    text-align: left;
+}
+
+.available-info {
+    font-size: 13px;
+    color: #757575;
+    font-weight: 400;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.available-info li+li {
+    margin-top: 5px;
+}
+
+.available-info li i {
+    width: 22px;
+}
+
+label.available {
+    position: relative;
+    color: #0069d9;
+    font-size: 15px;
+    border: 2px solid #0069d9;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+}
+
+label.available:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 3px solid #0069d9;
+    border-radius: 50%;
+    margin-right: 20px;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked+label.available {
+    background-color: #0069d9;
+    color: #fff;
+}
+
+input[type="radio"]:checked+label.available:before {
+    height: 16px;
+    width: 16px;
+    border: 3px solid #ffffff;
+    background-color: #0069d9;
+}

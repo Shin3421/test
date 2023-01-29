@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    background: #ffeffe;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 40px;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+
+/*
+.navbar-nav {
+    margin-left: 180px;
+}
+@media only screen and (min-width: 1415px) {
+    #nav_acc {
+    left: 130px;
+    } 
+}
+*/
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #980799;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -7px;
+    transition: 0.4s ease-out;
+}
+
+.nav-link:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.collapse {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    position: absolute;
+    right: 80px;
+    margin-top: 0px;
+    background-color: #00c5ce;
+}
+
+.btn_register {
+    background-color: #00c5ce;
+    display: inline-block;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    color: white;
+}
+
+.btn_login {
+    background-color: #00c5ce;
+    display: inline-block;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    color: white;
+}
+
+@media only screen and (max-width: 991px) {
+    #serviceandpricingbanner {
+        display: none;
+    }
+    .logo {
+        width: 50px;
+        margin-left: 20px;
+    }
+    .nav-link {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 0px;
+    }
+    .btn {
+        position: relative;
+        left: 0%;
+        margin: 15px 0;
+    }
+    .btn_register {
+        position: relative;
+        left: 45%;
+        margin: 15px 0;
+    }
+    .btn_login {
+        position: relative;
+        left: 45%;
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .btn {
+        position: relative;
+    }
+    .btn_register {
+        position: relative;
+        left: 39%;
+    }
+    .btn_login {
+        position: relative;
+        left: 39%;
+    }
+}
+
+
+/* Floating icon Section */
+
+.side:hover {
+    width: 250px;
+}
+
+.side {
+    position: fixed;
+    width: 45px;
+    margin-top: 220px;
+    transition: all 0.3s linear;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
+    list-style: none;
+    right: 0;
+    z-index: 10;
+}
+
+.side li {
+    height: 50px;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+}
+
+.side li .hoverA {
+    color: rgb(0, 0, 0);
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    padding-left: 25%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+}
+
+.side li:nth-child(1) .hoverA {
+    background: #0695ff;
+}
+
+.side li:nth-child(2) .hoverA {
+    background-image: linear-gradient(#ff6968, #a334fa, #0695ff);
+}
+
+.side li:nth-child(3) .hoverA {
+    background-image: linear-gradient(#34a853, #34a853, #34a853);
+}
+
+.side-media {
+    width: 40px;
+    height: 25px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+.d-block,
+.col-lg-6,
+.pb-2,
+#accordion {
+    animation-name: paragraph;
+    animation-duration: 4s;
+}
+
+@keyframes paragraph {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#button_reserve {
+    animation-name: buttons;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes buttons {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 4%;
+        opacity: 0.5;
+        background-color: #a334fa;
+    }
+    100% {
+        left: 7%;
+        opacity: 1;
+    }
+}
+
+
+/* bubbles */
+
+.bubbles_container {
+    width: 100%;
+    height: 86vh;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    z-index: -4;
+}
+
+.bub {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #86e7ff;
+    box-shadow: inset 5px -5px 10px #8bf1ff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: 0px;
+    /* animation: bubble 3s ease-in infinite; */
+}
+
+.bub::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 20px;
+    right: 23px;
+    box-shadow: 0px 0px 20px white;
+}
+
+.bub.a {
+    left: 10%;
+    animation: bubble2 5s ease-in 2s infinite;
+}
+
+.bub.b {
+    left: 20%;
+    animation: bubble 4s ease-in 1.4s infinite;
+}
+
+.bub.c {
+    width: 60px;
+    height: 60px;
+    left: 28%;
+    animation: bubble 5s ease-in 3.8s infinite;
+}
+
+.bub.d {
+    width: 85px;
+    height: 85px;
+    left: 40%;
+    animation: bubble 3s ease-in 0.5s infinite;
+}
+
+.bub.e {
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    animation: bubble2 4s ease-in 2.5s infinite;
+    z-index: 1;
+}
+
+.bub.f {
+    left: 90%;
+    animation: bubble 3s ease-in 3s infinite;
+}
+
+.bub.g {
+    left: 60%;
+    animation: bubble 3s ease-in 2s infinite;
+    z-index: 1;
+}
+
+.bub.k {
+    left: 50%;
+    animation: bubble 4s ease-in 2s infinite;
+}
+
+.bub.i {
+    width: 80px;
+    height: 80px;
+    left: 65%;
+    animation: bubble2 3s ease-in 2.1s infinite;
+    z-index: 1;
+}
+
+.bub.j {
+    width: 90px;
+    height: 90px;
+    left: 3%;
+    animation: bubble 3s ease-in 1.5s infinite;
+}
+
+.bub.h {
+    left: 35%;
+    animation: bubble2 4s ease-in infinite;
+}
+
+@keyframes bubble {
+    0% {
+        opacity: 0;
+    }
+    10%,
+    93% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(90px, -700px);
+        display: none;
+    }
+}
+
+@keyframes bubble2 {
+    0% {
+        opacity: 0;
+    }
+    10%,
+    93% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-90px, -700px);
+        display: none;
+    }
+}
+
+
+/* Services Section */
+
+.btn_service_pricing {
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    right: 120px;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: #ffa3f9;
+}
+
+.btn_service_pricing:hover {
+    box-shadow: 1px 1px 10px 1px;
+    transition: 0.5s;
+}
+
+.superwash_highlight {
+    font-weight: 800;
+    color: #00c5ce;
+}
+
+.laundromat_highlight {
+    font-weight: 800;
+    color: #980299;
+}
+
+
+/* Services Title */
+
+.pb-2 {
+    margin-bottom: 80px;
+    margin: 100px 130px;
+}
+
+
+/* Description */
+
+.card {
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+.btn_SandP_collapse {
+    padding: 10px -1px;
+    margin: 13px 0;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+}
+
+.btn_SandP_collapse:hover {
+    box-shadow: 1px 1px 10px 1px;
+    transition: 0.5s;
+    color: #0275d8;
+}
+
+.SandB_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0275d8;
+}
+
+
+/* Prices */
+
+.single-price {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    background: #ffffff;
+    transition: 0.7s;
+    margin-top: 5px;
+    margin-bottom: 150px;
+    box-shadow: 0 5px 10px rgba(62, 62, 62, 0.2);
+    border-radius: 5px;
+}
+
+.single-price h3 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    margin-top: -95px;
+    font-family: "Poppins", sans-serif;
+    color: #980799;
+}
+
+.single-price h4 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.single-price h4 span.sup {
+    vertical-align: text-top;
+    font-size: 25px;
+}
+
+.deal-top {
+    position: relative;
+    background: #00c5ce;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 136px 24px 0;
+}
+
+.deal-bottom {
+    padding: 0px 16px 0;
+}
+
+.deal-bottom ul {
+    margin: 0;
+    padding: 0;
+}
+
+.deal-bottom ul li {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px;
+    border-top: 1px solid #e4e4e4;
+    padding-top: 16px;
+    list-style: none;
+}
+
+.btn-area a {
+    display: inline-block;
+    font-size: 18px;
+    background: #00c5ce;
+    padding: 8px 64px;
+    margin-top: 32px;
+    border-color: black;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.deal-bottom .margin_bottom {
+    margin-bottom: 52px;
+}
+
+h6 {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.deal-bottom .deal-item .border_bottom {
+    border-top: 1px solid #e4e4e400;
+}
+
+
+/* Footer */
+
+.image-footer {
+    width: 24px;
+    height: 23px;
+    margin: 0 10px;
+}
+
+.social-med-h3 {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.links-ul {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.card-body {
+    padding: 70px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+#btn_serviceNprice:hover {
+    background-color: #980299;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    transition: 0.2s ease-in-out;
+}
